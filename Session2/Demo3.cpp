@@ -19,8 +19,9 @@ int main(){
 				printf("pt vo nghiem");
 			}
 		}else{
-			int x = -c/b;// se co sai sot khi chia khong het
-			printf("Pt co nghiem: %d",x);
+			float x = -(float)c/b; // bien c van la int, nhung tai thoi diem nay, gia tri cua c (vi du 15) se thanh 15.0000
+			printf("Pt co nghiem: %f",x);
+			//printf("c = %d",c)
 		}
 	}else{
 		int delta = b*b - 4*a*c;
@@ -28,13 +29,13 @@ int main(){
 			printf("pt vo nghiem");
 		}else{
 			if(delta == 0){
-				int x12 = -b/(2*a);
-				printf("Pt co nghiem kep: %d",x12);
+				float x12 = -(float)b/(2*a);
+				printf("Pt co nghiem kep: %f",x12);
 			}else{
-				int x1 = (-b+sqrt(delta))/(2*a);
-				int x2 = (-b-sqrt(delta))/(2*a);
-				printf("Nghiem thu nhat: %d\n",x1);
-				printf("Nghiem thu hai: %d\n",x2);
+				float x1 = (-b+sqrt(delta))/(2*a);
+				float x2 = (-b-sqrt(delta))/(2*a);
+				printf("Nghiem thu nhat: %f\n",x1);
+				printf("Nghiem thu hai: %f\n",x2);
 			}
 		}
 	}
